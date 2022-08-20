@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         body.style.overflow = "";
     };
 
-    setTimeout(animateIn, 150);
+    animateIn();
 
     loader.addEventListener("animationend", endAnimation);
 });

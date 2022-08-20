@@ -1,0 +1,143 @@
+@import "../components/loader/css/loader.css";
+
+/* ---------- box-sizing and resets ------------- */
+
+:root {
+    --primary-color-1: 214 77 51;
+    --primary-color-2: 80 170 108;
+    --primary-color-3: 215 95 116;
+
+    --accent-color-1: 223 220 98;
+    --accent-color-2: 236 161 65;
+    --accent-color-3: 94 35 86;
+    --accent-color-4: 204 219 133;
+    --accent-color-support: 17 63 96;
+
+    --page-transition-loader-bg: 227 227 227;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    scroll-padding-top: 25%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8vh;
+}
+
+/* ------------- header and navigation ------------- */
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.primary-navbar {
+    width: 100%;
+    background-color: rgb(255 255 255 / 0.3);
+}
+
+.primary-navbar * {
+    background-color: transparent;
+}
+
+.navbar-items-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ------------- default settings ------------- */
+
+nav a {
+    text-transform: capitalize;
+}
+
+:not(nav) a {
+    color: black !important;
+    text-decoration: none !important;
+    opacity: 0.65 !important;
+    transition: 150ms;
+}
+
+a:hover {
+    opacity: 1 !important;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+.primary-bg-1 {
+    background-color: rgb(var(--primary-color-1));
+}
+
+.primary-bg-2 {
+    background-color: rgb(var(--primary-color-2));
+}
+
+.primary-bg-3 {
+    background-color: rgb(var(--primary-color-3));
+}
+
+[data-sport-clr="calcio"] {
+    background-color: rgb(var(--accent-color-1));
+}
+
+[data-sport-clr="atletica"] {
+    background-color: rgb(var(--accent-color-2));
+}
+
+[data-sport-clr="pallavolo"] {
+    background-color: rgb(var(--accent-color-3));
+}
+
+[data-sport-clr="nuoto"] {
+    background-color: rgb(var(--accent-color-4));
+}
+
+[data-sport-clr="support"] {
+    background-color: rgb(var(--accent-color-support));
+}
+
+[data-hover-clr] {
+    transition: color 450ms;
+}
+
+[data-hover-clr="1"]:hover {
+    color: rgb(var(--accent-color-1)) !important;
+}
+
+[data-hover-clr="2"]:hover {
+    color: rgb(var(--accent-color-2)) !important;
+}
+
+[data-hover-clr="3"]:hover {
+    color: rgb(var(--accent-color-3)) !important;
+}
+
+[data-hover-clr="4"]:hover {
+    color: rgb(var(--accent-color-4)) !important;
+}
+
+[data-hover-clr="5"]:hover {
+    color: rgb(var(--accent-color-support)) !important;
+}

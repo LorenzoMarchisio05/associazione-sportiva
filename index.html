@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Associazion sportiva</title>
+        <link rel="icon" type="image/png" href="./sources/home.png" />
+
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- google icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+        <!-- loader -->
+        <script src="components/loader/js/loader.js"></script>
+        <div page-transition-loader></div> 
+
+        <!-- page redirect -->
+        <script
+            src="./components/page redirect handler/pageredirect.js"
+            defer
+        ></script>
+
+        <link rel="stylesheet" href="css/home.css" />
+        <script src="./components/carousel/carousel.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav class="primary-navbar navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <h3><a href="#" style="color: black">Associazione Sportiva</a></h3>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarNavAltMarkup"
+                    >
+                        <div class="navbar-nav navbar-items-container">
+                            <a class="nav-link" href="#chiSiamo">Chi siamo</a>
+                            <a class="nav-link" href="#cosaFacciamo"
+                                >Cosa facciamo</a
+                            >
+                            <a class="nav-link" href="#contattaci"
+                                >Contattaci</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="main-image"></div>
+
+        <section class="contents primary-bg-1 chiSiamo" id="chiSiamo">
+            <div class="image"></div>
+            <div class="content">
+                <h2>Chi siamo</h2>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Molestias incidunt autem doloribus nulla dicta, 
+                    ipsam enim consequuntur alias nisi labore magnam dolorum recusandae animi rerum libero, 
+                    illo possimus vero inventore deserunt? Quidem praesentium, 
+                    doloribus illo adipisci tenetur vero ex debitis eum esse, 
+                    molestiae dolore repudiandae, deserunt ipsam! Excepturi, 
+                    doloremque eligendi. Nihil deleniti esse minus nostrum consequatur, 
+                    id delectus tempora consequuntur cupiditate distinctio natus necessitatibus ratione qui quas 
+                    harum commodi recusandae enim exercitationem, vitae expedita in cum aut numquam. Aliquam, vero!
+                </p>
+            </div>
+        </section>
+        <section class="contents primary-bg-2 cosaFacciamo" id="cosaFacciamo">
+            <div class="content">
+                <div>
+                    <h2>Cosa facciamo</h2>
+
+                    <p>
+                        Ofrriamo diverse attivita sportive, sia per i più giovani cher per quelli più grandicelli, non esitate a contattarci per ulteriori informazioni
+                    </p>
+                </div>
+                
+                <p class="text">
+
+                    <span class="subphrase">
+                        ecco alcune delle attività da noi offerte:
+                    </span>
+                    <ul>
+                        <li><button data-redirect="calcio.html" data-hover-clr="1" data-sport="calcio" >Calcio</button></li>
+                        <li><button data-redirect="atletica.html" data-hover-clr="2" data-sport="atletica">Atletica</button></li>
+                        <li><button data-redirect="pallavolo.html" data-hover-clr="3" data-sport="pallavolo">Pallavolo</button></li>
+                        <li><button data-redirect="nuoto.html" data-hover-clr="4" data-sport="nuoto">Nuoto</button></li>
+                    </ul>
+                </p>
+            </div>
+            <div class="image calcio"></div>
+        </section>
+        <section class="contents primary-bg-3 contattaci" id="contattaci">
+            <div class="image"></div>
+            <div class="content">
+                <div>
+                    <h2>Contattaci</h2>
+                    <span class="subphrase">
+                        Ci fa sempre piacere ricevere commenti costruttivi e migliorarci 
+                    </span>
+                </div>
+                <p class="text">
+                    <div>
+                        <h3>Facci sapere cosa ne pensi</h3>
+                        <span class="subphrase">
+                            Segui i passaggi nella pagine qui sotto
+                        </span>
+                    </div>
+                    
+                    <button data-redirect="support.html" class="btn btn-outline-dark">  Contattaci </button>
+                </p>
+            </div>
+        </section>
+    </body>
+</html>

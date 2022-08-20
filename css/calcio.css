@@ -47,7 +47,7 @@ body {
 }
 
 .images-section > img {
-    width: 80%;
+    width: 50%;
     aspect-ratio: 1;
     object-fit: cover;
 }

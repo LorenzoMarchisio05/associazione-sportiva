@@ -67,6 +67,7 @@ button[data-sport] {
     content: " ";
     position: absolute;
     inset: 0;
+    border-bottom-right-radius: 5vmax;
 }
 
 /* -------------- first section ---------------- */
@@ -114,6 +115,8 @@ button[data-sport] {
 
 .cosaFacciamo .image::after {
     background-color: rgb(var(--primary-color-2) / 0.35);
+    border-bottom-left-radius: 5vmax;
+    border-bottom-right-radius: 0;
 }
 
 .calcio {

@@ -1,21 +1,7 @@
 @import "../components/loader/css/loader.css";
+@import "./root.css";
 
 /* ---------- box-sizing and resets ------------- */
-
-:root {
-    --primary-color-1: 214 77 51;
-    --primary-color-2: 80 170 108;
-    --primary-color-3: 215 95 116;
-
-    --accent-color-1: 223 220 98;
-    --accent-color-2: 236 161 65;
-    --accent-color-3: 94 35 86;
-    --accent-color-4: 204 219 133;
-    --accent-color-support: 17 63 96;
-
-    --page-transition-loader-bg: 227 227 227;
-}
-
 *,
 ::before,
 ::after {

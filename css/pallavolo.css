@@ -18,6 +18,10 @@ body {
 
 .spinner-container {
     position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
     width: min(25%, 250px);
     aspect-ratio: 1;
     transform-style: preserve-3d;
@@ -26,21 +30,23 @@ body {
 }
 
 .spinner-element {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
 
+    grid-row-start: 1;
+    grid-column-start: 1;
+
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
 
     transform-origin: center;
     transform-style: preserve-3d;
     transform: rotateY(calc(var(--i) * 60deg)) translateZ(min(30vw, 400px));
-    background-color: white;
+
+    background-color: rgb(var(--card-bg-color));
+    color: #ddd;
     overflow: hidden;
 
     font-size: 1rem;
@@ -49,9 +55,9 @@ body {
 
     border-radius: 5px;
 
-    box-shadow: rgba(255 255 255 / 0.2) 0px 7px 29px 0px;
-    -webkit-box-shadow: rgba(255 255 255 / 0.2) 0px 7px 29px 0px;
-    -moz-box-shadow: rgba(255 255 255 / 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(255 255 255 / 0.2) 1px 7px 29px 0px;
+    -webkit-box-shadow: rgba(255 255 255 / 0.2) 1px 7px 29px 0px;
+    -moz-box-shadow: rgba(255 255 255 / 0.2) 1px 7px 29px 0px;
 }
 
 .spinner-element h2 {
@@ -61,11 +67,47 @@ body {
 .spinner-element:hover {
     transform: rotateY(calc(var(--i) * 60deg)) translateZ(min(30vw, 400px))
         scale(1.1);
+    box-shadow: rgba(255 255 255 / 0.2) 1px 7px 45px 0px;
+    -webkit-box-shadow: rgba(255 255 255 / 0.2) 1px 7px 45px 0px;
+    -moz-box-shadow: rgba(255 255 255 / 0.2) 1px 7px 45px 0px;
 }
 
 .spinner-element:hover > h2,
 .spinner-element.selected > h2 {
     color: rgb(var(--accent-color-3));
+    filter: saturate(500%);
+}
+
+.spinner-element.has-image {
+    width: 150%;
+    flex-direction: row;
+}
+
+.spinner-element.has-image:not(.selected) > img {
+    display: none;
+}
+
+.spinner-element.has-image:not(.selected) > div {
+    width: 100%;
+}
+
+.spinner-element.has-image > img {
+    display: block;
+    transform: scaleX(1);
+    transform-origin: center left;
+}
+
+.spinner-element.has-image > img {
+    height: 100%;
+    width: 35%;
+    padding-left: 3px;
+    object-fit: cover;
+    border-left: 1px solid rgb(var(--accent-color-3));
+}
+
+.spinner-element.has-image > div {
+    height: 100%;
+    width: 65%;
 }
 
 .spinner-container.no-animation {
@@ -76,11 +118,20 @@ body {
     transform: scale(3.5) rotateY(0);
     overflow-y: auto;
     font-size: 0.6rem;
+}
+
+.spinner-element.selected:not(.image-bg) {
     padding-inline-end: 1rem;
 }
 
-.spinner-container.no-animation div:not(.selected) {
+.spinner-container.no-animation .spinner-element:not(.selected) {
     display: none;
+}
+
+.spinner-element.image-bg > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @keyframes animate {

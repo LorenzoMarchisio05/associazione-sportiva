@@ -107,8 +107,7 @@ body {
 }
 
 .bubble-3:after {
-    border-top-right-radius: 45%;
-    border-bottom-left-radius: 25%;
+    background: none;
 }
 
 .bubble-4 {
@@ -123,4 +122,11 @@ body {
 .bubble-4:after {
     border-top-right-radius: 44%;
     border-bottom-left-radius: 38%;
+}
+
+.image-atletica {
+    background-image: url("https://qualisono.com/wp-content/uploads/2021/08/ATLETICA-LEGGERA.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }

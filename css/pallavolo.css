@@ -1,1 +1,93 @@
 @import "./style.css";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    gap: 0;
+    background-color: rgb(var(--accent-color-3));
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner-container {
+    position: relative;
+    width: min(25%, 250px);
+    aspect-ratio: 1;
+    transform-style: preserve-3d;
+
+    animation: animate 20000ms linear infinite;
+}
+
+.spinner-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(min(30vw, 400px));
+    background-color: white;
+    overflow: hidden;
+
+    font-size: 1rem;
+    padding: 2%;
+    transition: 550ms;
+
+    border-radius: 5px;
+
+    box-shadow: rgba(255 255 255 / 0.2) 0px 7px 29px 0px;
+    -webkit-box-shadow: rgba(255 255 255 / 0.2) 0px 7px 29px 0px;
+    -moz-box-shadow: rgba(255 255 255 / 0.2) 0px 7px 29px 0px;
+}
+
+.spinner-element h2 {
+    margin-right: auto;
+}
+
+.spinner-element:hover {
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(min(30vw, 400px))
+        scale(1.1);
+}
+
+.spinner-element:hover > h2,
+.spinner-element.selected > h2 {
+    color: rgb(var(--accent-color-3));
+}
+
+.spinner-container.no-animation {
+    animation: none;
+}
+
+.spinner-element.selected {
+    transform: scale(3.5) rotateY(0);
+    overflow-y: auto;
+    font-size: 0.6rem;
+    padding-inline-end: 1rem;
+}
+
+.spinner-container.no-animation div:not(.selected) {
+    display: none;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}

@@ -1,1 +1,59 @@
 @import "./style.css";
+
+html,
+body {
+    height: 100%;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.support-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+    gap: 1rem;
+}
+
+.group {
+    height: 40%;
+    flex: 1 1 50%;
+    padding-inline: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2595a9;
+    max-width: 70ch;
+}
+
+.group * {
+    color: rgb(var(--accent-color-support));
+}
+
+.input-text,
+.input-textArea {
+    border: 1px solid rgb(var(--accent-color-support));
+    border-radius: 2px;
+    padding: 3px;
+}
+
+.input-textArea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+[class*="input-"] {
+    background-color: transparent;
+}
+
+#btnSubmit {
+    margin-left: auto;
+    margin-top: 3px;
+}

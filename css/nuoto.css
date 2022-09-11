@@ -1,1 +1,38 @@
 @import "./style.css";
+
+html,
+body {
+    height: 100%;
+}
+
+.main-container {
+    padding-inline: 1rem;
+    gap: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background-color: rgb(var(--accent-color-4));
+    border-radius: 5px;
+    padding: 1rem;
+    max-height: 50%;
+    overflow-y: scroll;
+}
+
+.content_text {
+    font-size: max(1.35rem, 1%);
+}
+
+.content_header {
+    font-size: max(2rem, 2%);
+}
+
+.offset-top {
+    margin-top: -15%;
+}
+
+.offset-bottom {
+    margin-bottom: -15%;
+}

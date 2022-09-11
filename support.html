@@ -72,5 +72,33 @@
                 </div>
             </nav>
         </header>
+
+        <main class="main-container">
+            <form id="support-form" class="support-form">
+                <div class="group group-data">
+                    <label for="txtName">Nome:</label>
+                    <input type="text" class="input-text" id="txtName" />
+                    <label for="txtSurname">Cognome:</label>
+                    <input type="text" class="input-text" id="txtSurname" />
+                    <label for="txtEmail">Email:</label>
+                    <input type="email" class="input-text" id="txtEmail" />
+                </div>
+                <div class="group group-suggestions">
+                    <label for="txtSuggestion"
+                        >Scrivi le tue considerazioni:</label
+                    >
+                    <textarea
+                        id="txtSuggestion"
+                        class="input-textArea"
+                    ></textarea>
+                    <input
+                        type="submit"
+                        value="Invia"
+                        id="btnSubmit"
+                        class="btn"
+                    />
+                </div>
+            </form>
+        </main>
     </body>
 </html>
